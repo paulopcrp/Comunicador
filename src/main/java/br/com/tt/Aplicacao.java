@@ -1,5 +1,6 @@
 package br.com.tt;
 
+import br.com.tt.model.Mensagem;
 import br.com.tt.model.Usuario;
 
 import java.util.Scanner;
@@ -7,6 +8,9 @@ import java.util.Scanner;
 public class Aplicacao {
     private static Usuario[] usuarios = new Usuario[2];
     private static int indiceUsuario = 0;
+
+    private static Mensagem[] mensagem = new Mensagem[2];
+    private static int indiceMensagem = 0;
 
     public static void main(String[] args) {
         perguntarUsername();
@@ -29,5 +33,9 @@ public class Aplicacao {
         Usuario novoUsuario = new Usuario();
         novoUsuario.setNome(nome);
         usuarios[indiceUsuario++] = novoUsuario;
+
+        Mensagem novaMensagem = new Mensagem();
+        novaMensagem.setMensagem(mensagem);
+        mensagem[indiceMensagem++] = novaMensagem;
     }
 }
